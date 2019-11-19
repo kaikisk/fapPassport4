@@ -1,0 +1,77 @@
+body {
+  padding: 1.5%;
+}
+
+.btn{
+  padding:1%;
+}
+
+img {
+  width: 100%;
+}
+
+.btn_fifty {
+  margin: 2px;
+  width: 48%;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.btn_sixty{
+  padding: 2%;
+  margin-left: 10%;
+  margin-bottom: 3px;
+  text-align: center;
+  width: 60%;
+  display: inline-block;
+  overflow: hidden;
+}
+
+table , td, th {
+  border: 1px solid #595959;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.table th{
+  border-top: 1px solid #595959;
+}
+
+.table td {
+  border-top: 1px solid #595959;
+}
+
+.green_color {
+  background: #5cb85c; /*緑*/
+}
+
+.yellow_color {
+  background: #ccc016 /*黄色*/;
+}
+
+.red_color {
+  background: #f50303 /*黄色*/;
+}
+
+.video {
+  border: 1px solid #e41414;
+  width: 80vw;
+  height: 80vh;
+  margin: 10%;
+}
+
+.myVideo {
+  object-fit: fill;
+  width: 80vw;
+  height: 80vh;
+}
+
+.cnv {
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+.photoNumber {
+  display: inline-block;
+  font-size: 120%;
+}
