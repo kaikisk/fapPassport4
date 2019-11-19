@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="../bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../custom.css" />
+    <title>FAP Passport</title>
+    <script src="../jquery-2.2.4.min.js"></script>
+    <script src="../javaScript/indexedDB.js"></script>
+    <script src="../javaScript/result.js"></script>
+    <script src="../javaScript/checkResult.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#" onclick="returnMenu()">FAP PASSPORT</a>
+    </nav>
+
+    <br />
+    <button class="btn btn-primary btn-lg btn-block" onclick="returnMenu()">戻る</button>
+    <br>
+    <div class="card">
+        <div class="card-body">
+            <h2 class="card-title" style="text-align: center">検診結果</h2>
+            <div class="row">
+                <div class="form-group col-lg-2">
+                    予定日
+                    <input type="date" id="txtDate" class="form-control" />
+                </div>
+                <div class="form-group col-lg-4" id="RblExamination">
+                    受診科目
+                    <select id="Examination" class="form-control" name="type">
+                        <option id="RblExamination1" value="胃(食道)カメラ">胃(食道)カメラ</option>
+                        <option id="RblExamination2" value="大腸カメラ">大腸カメラ</option>
+                        <option id="RblExamination3" value="腹部エコー">腹部エコー</option>
+                        <option id="RblExamination4" value="腹部CT">腹部CT</option>
+                        <option id="RblExamination5" value="マンモグラフィー">マンモグラフィー</option>
+                        <option id="RblExamination6" value="腎エコー">腎エコー</option>
+                        <option id="RblExamination7" value="その他">その他</option>
+                    </select>
+                </div>
+                <div class="form-group col-lg-6" id="RblResult">
+                    受信結果<br>
+                    <select class="form-control" id="rblresult" name="type" size="1">
+                        <option id="RblResult1" value="OK">OK</option>
+                        <option id="RblResult2" value="要治療">要治療</option>
+                        <option id="RblResult3" value="その他">その他</option>
+                    </select>
+                </div>
+                <div class="form-group col-lg-8">
+                    備考
+                    <input type="text" id="txtdetail" class="form-control" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-lg-12">
+                    <button id="movePhoto" class="btn btn-primary btn_sixty">写真の添付</button>
+                    <div id="photoNumber" class="photoNumber"></div>
+                    <div id="btn_update">
+                        <button class="btn btn-primary btn-lg btn-block" onclick="resultRegistration()">登録</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+
+    <form>
+        <div>
+            <table id="Table1" class="table">
+                <tr>
+                    <th>日付</th>
+                    <th>検査項目</th>
+                    <th>備考</th>
+                    <th>結果</th>
+                    <th></th>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+
+</html>

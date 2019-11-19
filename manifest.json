@@ -1,0 +1,18 @@
+{
+    "name": "FAP Passport",
+    "short_name": "FAP Passport",
+    "background_color": "#cccccc",
+    "start_url": "./index.html",
+    "icons": [{
+      "src": "./revealweb.png",
+      "sizes": "80x80",
+      "type": "image/png"
+    },{
+        "src": "./revealweb-144.png",
+        "sizes" : "144x144",
+        "type": "image/png"
+
+    }],
+    "display": "standalone",
+    "gcm_sender_id": "664067518579"
+}

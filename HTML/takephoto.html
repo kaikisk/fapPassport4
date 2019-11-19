@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" ; charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="../bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../custom.css" />
+    <title>FAP Passport</title>
+    <script src="../jquery-2.2.4.min.js"></script>
+    <script src="../javaScript/indexedDB.js"></script>
+
+    <style type="text/css">
+        img {
+            max-width: 100%;
+            widows: auto;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">FAP PASSPORT</a>
+    </nav>
+
+    <br /><br /><br />
+    <button class="btn btn-primary btn-lg btn-block" onclick="location.href='previewPhoto.html'">戻る</button>
+    <br>
+    <div class="video">
+        <video class="myVideo" id="myVideo" autoplay="1"></video>
+        <script type="text/javascript" src="camera.js"></script>
+        <canvas id="canvas" style="display:none;"></canvas>
+    </div>
+    
+    <div id="btn_update">
+        <button id="takePhoto" class="btn btn-primary btn-lg btn-block" onclick="takePhoto()">写真撮影</button>
+    </div>
+    <br />
+</body>
+
+</html>

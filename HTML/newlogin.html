@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="../bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../custom.css" />
+    <title>FAP Passport</title>
+    <script src="../jquery-2.2.4.min.js"></script>
+    <script src="../javaScript/indexedDB.js"></script>
+    <script src="../javaScript/newlogin.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">FAP PASSPORT</a>
+    </nav>
+    <br />
+
+    <p style="font-size: large;">下記項目を入力して、登録を完了させてください。</p>
+    <div class="form-group">
+        <p>●ユーザーIDを入力してください。</p>
+        <input type="text" id="userID" class="form-control" />
+    </div>
+    <div class="form-group">
+        <p>●パスワードを設定してください。</p>
+        <p>新しいパスワード</p>
+        <input type="password" id="userPass" class="form-control" />
+        <p>新しいパスワード（確認用)</p>
+        <input type="password" id="userPassCheck" class="form-control" />
+    </div>
+    <div>
+        <button class="btn btn-primary btn-block" id="registration">登録</button>
+    </div>
+
+</body>
+
+</html>
