@@ -29,7 +29,7 @@ function clickLoginButton() {
     txtName.then((name) => {
         txtPass.then((pass) => {
             if($('#txtUserID').val() == name && $('#txtPass').val() == pass){
-                location.href = 'menu.html';
+                location.href = './HTML/menu.html';
             }
             if ($('#txtUserID').val() != name) {
                 alert('ユーザーIDが違います');
