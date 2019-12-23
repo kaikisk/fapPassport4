@@ -15,7 +15,11 @@ $(function () {
         }
         const endTime = performance.now();
         console.log("実行時間： " + (endTime - startTime) + " ms");
-    }).catch(err => console.log("検診予約が登録されていません"));
+    }).catch(err => {
+        console.log("検診予約が登録されていません");
+        const endTime = performance.now();
+        console.log("実行時間： " + (endTime - startTime) + " ms");
+        });
 
 })
 
