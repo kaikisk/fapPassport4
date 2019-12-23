@@ -14,6 +14,7 @@ function appointmentRegistration() {
         valClient: val,
         detailClient: detail
     }
+
     var appointmentsString = getData("appointments");
 
     appointmentsString.then(ap => {
@@ -22,7 +23,7 @@ function appointmentRegistration() {
             var L = appointments.length;
             appointments[L] = client;
             var temp = JSON.stringify(appointments);
-            console.log(temp);
+            console.dir(temp);
             saveAppointment(temp).then(() => {
                 alert("登録が完了しました");
                 resetElement();
@@ -38,6 +39,7 @@ function appointmentRegistration() {
         console.log(err + "はまだ登録されていません");
         var appointments = [client];
         var temp = JSON.stringify(appointments);
+        console.dir(temp);
         saveAppointment(temp).then(() => {
             alert("登録が完了しました");
             resetElement();

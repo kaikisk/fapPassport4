@@ -14,7 +14,7 @@ $(function () {
                 + '<button type="button" class="btn btn-danger" onclick="deleteAppointment(' + i + ')">削除</button></td></tr>');
         }
         const endTime = performance.now();
-        console.log("実行時間： " + (endTime - startTime));
+        console.log("実行時間： " + (endTime - startTime) + " ms");
     }).catch(err => console.log("検診予約が登録されていません"));
 
 })
