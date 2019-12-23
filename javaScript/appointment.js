@@ -95,7 +95,7 @@ function regCount(){
         }
     }).catch(err => {
         console.log(err + "はまだ登録されていません");
-        // var appointments = [client];
+        var appointments;
         for(var i = 0; count > i; i++){
             appointments[i] = client;
         }
