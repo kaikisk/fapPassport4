@@ -1,17 +1,22 @@
 var appointments;
 $(function () {
+    const startTime = performance.now(); // 開始時間
+
     var appointmentsString = getData("appointments");
     appointmentsString.then(ap => {
         appointments = JSON.parse(ap);
         for (var i = 0; i < appointments.length; i++) {
-            console.log(i + " : " + appointments[i])
+            // console.log(i + " : " + appointments[i])
             $('#Table1').append('<tr id=table' + i + '><td>' + appointments[i].dateClient +
                 '</td><td>' + appointments[i].valClient + '</td><td>' + appointments[i].detailClient
                 + '</td><td><button type="button" class="btn btn-secondary" onclick="clickRegister(' + i + ')">更新</button>'
                 + '<button type="button" class="btn btn-success" onclick="clickResult(' + i + ')">結果</button>'
                 + '<button type="button" class="btn btn-danger" onclick="deleteAppointment(' + i + ')">削除</button></td></tr>');
         }
+        const endTime = performance.now();
+        console.log("実行時間： " + (endTime - startTime));
     }).catch(err => console.log("検診予約が登録されていません"));
+
 })
 
 
