@@ -52,6 +52,7 @@ function appointmentRegistration() {
 }
 
 function regCount(){
+    
     var count = $('#count').val();
     var date = $('#txtDate').val();
     var detail = $('#txtdetail').val();
