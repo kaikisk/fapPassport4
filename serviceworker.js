@@ -1,5 +1,5 @@
-var ORIGIN = location.protocol + '//' + location.hostname + '/fapPassport1';
-var STATIC_CACHE_NAME = 'static_v1';
+var ORIGIN = location.protocol + '//' + location.hostname + '/fapPassport3';
+var STATIC_CACHE_NAME = 'static_v2';
 console.log('ORIGIN : ' + ORIGIN);
 var STATIC_FILES = [
   ORIGIN + '/',
