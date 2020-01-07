@@ -72,17 +72,17 @@ function regCount(){
         detailClient: detail
     }
 
-    var appointmentsString = localStorage.getItem('appointments');
-    if (appointmentsString) {
-        var appointments = JSON.parse(appointmentsString);
-        var L = appointments.length;
-    } else {
-        var appointments; 
-        var L = 0;
-    }
-    for(var i=0; count > i; i++){
-        appointments[L+i] = client;
-    }
+    // var appointmentsString = localStorage.getItem('appointments');
+    // if (appointmentsString) {
+    //     var appointments = JSON.parse(appointmentsString);
+    //     var L = appointments.length;
+    // } else {
+    //     var appointments; 
+    //     var L = 0;
+    // }
+    // for(var i=0; count > i; i++){
+    //     appointments[L+i] = client;
+    // }
     // appointmentsString = JSON.stringify(appointments);
     // localStorage.setItem('appointments',appointmentsString);
 
