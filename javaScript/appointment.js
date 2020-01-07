@@ -83,51 +83,51 @@ function regCount(){
     for(var i=0; count > i; i++){
         appointments[L+i] = client;
     }
-    appointmentsString = JSON.stringify(appointments);
-    localStorage.setItem('appointments',appointmentsString);
+    // appointmentsString = JSON.stringify(appointments);
+    // localStorage.setItem('appointments',appointmentsString);
 
-    // var appointmentsString = getData("appointments");
+    var appointmentsString = getData("appointments");
 
-    // appointmentsString.then(ap => {
-    //     if (ap) {
-    //         var appointments = JSON.parse(ap);
-    //         var L = appointments.length;
-    //         // appointments[L] = client;
-    //         for(var i = 0; count > i; i++){
-    //             appointments[L + i] = client;
-    //         }
-    //         var temp = JSON.stringify(appointments);
-    //         console.log(temp);
-    //         saveAppointment(temp).then(() => {
-    //             alert("登録が完了しました");
-    //             resetElement();
-    //             for(var i = 0; count > i; i++){
-    //                 $('#Table1').append('<tr id=table' + (L+i) + '><td>' + appointments[L+i].dateClient +
-    //                 '</td><td>' + appointments[L+i].valClient + '</td><td>' + appointments[L+i].detailClient
-    //                 + '</td><td><button type="button" class="btn btn-secondary" onclick="clickRegister(' + (L+i) + ')">更新</button>' 
-    //                 + '<button type="button" class="btn btn-success" onclick="clickResult(' + (L+i) + ')">結果</button>'
-    //                 + '<button type="button" class="btn btn-danger" onclick="deleteAppointment(' + (L+i) + ')">削除</button></td></tr>');
-    //             }   
-    //             console.log("表示完了");
-    //         }).catch(err => alert(err));
-    //     }
-    // }).catch(err => {
-    //     console.log(err + "はまだ登録されていません");
-    //     var appointments;
-    //     for(var i = 0; count > i; i++){
-    //         appointments[i] = client;
-    //     }
-    //     var temp = JSON.stringify(appointments);
-    //     saveAppointment(temp).then(() => {
-    //         alert("登録が完了しました");
-    //         resetElement();
-    //         for(var i = 0; count > i; i++){
-    //             $('#Table1').append('<tr id=table' + i + '><td>' + appointments[i].dateClient +
-    //             '</td><td>' + appointments[i].valClient + '</td><td>' + appointments[i].detailClient
-    //             + '</td><td><button type="button" class="btn btn-secondary" onclick="clickRegister(' + i + ')">更新</button>' 
-    //             + '<button type="button" class="btn btn-success" onclick="clickResult(' + i + ')">結果</button>' 
-    //             + '<button type="button" class="btn btn-danger" onclick="deleteAppointment(' + i + ')">削除</button></td></tr>');
-    //         }
-    //     }).catch(err => alert(err));
+    appointmentsString.then(ap => {
+        if (ap) {
+            var appointments = JSON.parse(ap);
+            var L = appointments.length;
+            // appointments[L] = client;
+            for(var i = 0; count > i; i++){
+                appointments[L + i] = client;
+            }
+            var temp = JSON.stringify(appointments);
+            console.log(temp);
+            saveAppointment(temp).then(() => {
+                alert("登録が完了しました");
+                resetElement();
+                for(var i = 0; count > i; i++){
+                    $('#Table1').append('<tr id=table' + (L+i) + '><td>' + appointments[L+i].dateClient +
+                    '</td><td>' + appointments[L+i].valClient + '</td><td>' + appointments[L+i].detailClient
+                    + '</td><td><button type="button" class="btn btn-secondary" onclick="clickRegister(' + (L+i) + ')">更新</button>' 
+                    + '<button type="button" class="btn btn-success" onclick="clickResult(' + (L+i) + ')">結果</button>'
+                    + '<button type="button" class="btn btn-danger" onclick="deleteAppointment(' + (L+i) + ')">削除</button></td></tr>');
+                }   
+                console.log("表示完了");
+            }).catch(err => alert(err));
+        }
+    }).catch(err => {
+        console.log(err + "はまだ登録されていません");
+        var appointments;
+        for(var i = 0; count > i; i++){
+            appointments[i] = client;
+        }
+        var temp = JSON.stringify(appointments);
+        saveAppointment(temp).then(() => {
+            alert("登録が完了しました");
+            resetElement();
+            for(var i = 0; count > i; i++){
+                $('#Table1').append('<tr id=table' + i + '><td>' + appointments[i].dateClient +
+                '</td><td>' + appointments[i].valClient + '</td><td>' + appointments[i].detailClient
+                + '</td><td><button type="button" class="btn btn-secondary" onclick="clickRegister(' + i + ')">更新</button>' 
+                + '<button type="button" class="btn btn-success" onclick="clickResult(' + i + ')">結果</button>' 
+                + '<button type="button" class="btn btn-danger" onclick="deleteAppointment(' + i + ')">削除</button></td></tr>');
+            }
+        }).catch(err => alert(err));
     })
 }
