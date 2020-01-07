@@ -45,8 +45,7 @@ function takePhoto() {
         // alert("画像横：" + img1.width + "画像高さ：" + img1.height + ", videoWidth: " + width + ", videoHeight: " + height);
     };
     img1.src = img;
-    var originalBlob = base64ToBlob(originalBinary); //オリジナル容量blobデータを取得
-        alert(originalBlob["size"]);
+    
     $('#btn_update').html('<button class="btn btn-primary btn_fifty" id="ok">OK</button>'
         + '<button class="btn btn-primary btn_fifty" id="cancel">取り直し</button>');
     //OKボタンを押した時
