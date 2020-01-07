@@ -165,7 +165,7 @@ function resultRegistration() {
         var temp = JSON.stringify(results);
         saveReservation("results", temp).then(() => {
             alert("登録が完了しました");
-            $('#btn_update').html('<button class="btn-square-shadow btn_center green_color" id="submit" onclick="resultRegistration()">登録</button>');
+            $('#btn_update').html('<button class="btn btn-primary btn-lg btn-block" id="submit" onclick="resultRegistration()">登録</button>');
             var i = results.length - 1;
             if (index==0 || index) {
                 $('#table' + index).html('<td>' + results[index].dateClient +
